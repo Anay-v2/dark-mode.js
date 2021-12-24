@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - basic</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!--DO NOT USE THE CDN IN PRODUCTION. THIS IS JUST AN EXAMPLE. (see https://tailwindcss.com/docs/upgrade-guide#play-cdn)-->
+    <script>
+        tailwind.config = { darkMode: 'class' } // Turn dark mode to class
+    </script>
+    <style>
+        /* Transforms FTW! */
+        img:hover {
+            -moz-transform: skewX(15deg); /* FF3.5+ */
+            -webkit-transform: skew(15deg, 0deg); /*Saf3.1+, Chrome*/
+            -o-transform: skew(15deg, 0deg); /* Opera 10.5 */
+            -ms-transform: skew(15deg, 0deg); /* IE 9 */
+            transform: skew(15deg, 0deg);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            img:hover {
+                -moz-transform: skewX(10deg); /* FF3.5+ */
+                -webkit-transform: skew(10deg, 0deg); /*Saf3.1+, Chrome*/
+                -o-transform: skew(10deg, 0deg); /* Opera 10.5 */
+                -ms-transform: skew(10deg, 0deg); /* IE 9 */
+                transform: skew(10deg, 0deg)
+            }
+        }
+        body {
+            font-family: 'Roboto', sans-serif
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 grid place-items-center text-center">
+    <div class="flex items-center justify-center">
+        <h1 class="text-slate-900 dark:text-slate-100 text-7xl">Caramels icing cookie</h1>
+        <button data-dark-switch
+            class="appearance-none outline-none border-none bg-slate-300 dark:bg-slate-600 rounded-md p-3 duration-300 hover:bg-slate-400 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 ring-0 focus:ring-2 focus:ring-blue-600/40 h-12 ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 block dark:hidden" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+            <!--from heroicons.com-->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <!--from heroicons.com-->
+        </button>
+
+    </div>
+    <p class="text-slate-900 dark:text-slate-100 mt-5">Cupcake gummies bear claw sweet roll carrot cake. Jelly-o lemon drops macaroon tart bonbon chocolate bar. Cheesecake
+    tootsie roll pastry toffee wafer sugar plum bear claw. Candy carrot cake powder lollipop marshmallow shortbread gummi
+    bears. Pudding pie chupa chups jelly-o gummies dessert. Cotton candy dragée jelly carrot cake carrot cake oat cake
+    dragée oat cake soufflé. Dragée dragée jujubes sweet chocolate bar tiramisu croissant brownie cotton candy. Ice cream
+    gingerbread jelly beans lollipop halvah pastry sweet roll cupcake. Sesame snaps bonbon gummies biscuit croissant.
+    Lollipop macaroon tart chupa chups danish powder caramels cotton candy. Cake pie candy candy canes brownie jelly ice
+    cream. Marshmallow cheesecake dessert jelly beans gingerbread cotton candy liquorice bonbon cake. Jelly-o cookie soufflé
+    bear claw soufflé lollipop.</p>
+    <hr class="border-slate-900 dark:border-slate-100 my-5 w-[80%]">
+    <p class="text-slate-900 dark:text-slate-100">You have turned on <span data-dark-on></span> mode. When you click the toggle button, it will change to <span data-dark-off></span> mode.</p>
+    <button data-dark-switch data-dark-event="mouseover"
+        class="appearance-none outline-none border-none bg-slate-300 dark:bg-slate-600 rounded-md p-3 duration-300 hover:bg-slate-400 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 ring-0 focus:ring-2 focus:ring-blue-600/40 h-12 mt-3">
+        Hover over me to turn it to <span data-dark-off></span> mode.
+    </button>
+    <img alt="Sorry you can't see this!" class="text-slate-900 dark:text-slate-100 my-5 rounded-md duration-300 shadow-xl">
+    <p class="text-slate-900 dark:text-slate-100">Change it to <span data-dark-off></span> mode to see the picture change (only one <code class="text-yellow-600 dark:text-yellow-400">img</code> tag used!)</p>
+    <button id="dark" class="text-slate-900 dark:text-slate-100">Change to Dark mode</button>
+    <button id="light" class="text-slate-900 dark:text-slate-100">Change to Light mode</button>
+    <script src="../src/index.js"></script>
+    <script>
+        document.querySelector('img').src = `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/200/200` // set the image to a random one
+        darkMode.init() // Initialize darkMode.js
+        darkMode.UpdateDarkHook = v => { // This is used for the image
+            document.querySelector('img').src = `https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/200/200`
+        }
+        document.querySelector('#dark').addEventListener('click', () => {
+            darkMode.setDark(true)
+        })
+        document.querySelector('#light').addEventListener('click', () => {
+            darkMode.setDark(false)
+        })
+    </script>
+</body>
+</html>
