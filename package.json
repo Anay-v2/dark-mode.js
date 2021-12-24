@@ -7,6 +7,13 @@
     "tailwindcss",
     "dark mode"
   ],
+  "repository": {
+    "url": "https://github.com/Anay-v2/dark-mode.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Anay-v2/dark-mode.js/issues"
+  },
+  "homepage": "https://github.com/Anay-v2/dark-mode.js/issues#readme",
   "author": "Anay-v2 (Anay Sehgal)",
   "license": "MIT"
 }
