@@ -1,0 +1,12 @@
+{
+  "name": "dark-mode.js",
+  "version": "1.0",
+  "description": "Beautiful Tailwind CSS Dark Mode",
+  "main": "src/index.js",
+  "keywords": [
+    "tailwindcss",
+    "dark mode"
+  ],
+  "author": "Anay-v2 (Anay Sehgal)",
+  "license": "MIT"
+}
