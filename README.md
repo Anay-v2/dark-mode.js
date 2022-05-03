@@ -17,7 +17,7 @@ or
 Now run `darkMode.init()` to initialize the dark mode.
 Now you have 2 options:
 
-1. Use `darkMode.setDark(true/false)` to set dark mode.
+1. Use `darkMode.setDark()` to set dark mode.
 1. Use an element with the attribute `data-dark-toggle` to toggle dark mode. By default, dark mode will toggle when it is clicked, but you can change the event with the attribute `data-dark-event`.
 
 to see if dark mode is enabled, use `darkMode.isDark()`.
@@ -61,4 +61,4 @@ When dark mode is turned on, any tailwind class with the variant dark: (like `da
 
 ## License
 
-This project has the ***MIT*** license. See more at `LICENSE`
+This project has the **MIT** license. See more at `LICENSE`
