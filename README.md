@@ -57,7 +57,9 @@ So let's break this down. Basically what this does is it adds another variant, `
 
 When dark mode is turned on, any tailwind class with the variant dark: (like `dark:text-gray-100`) will be used.
 
-<hr>
+## Examples
+
+You can find examples in /examples ( [preview](https://anay-v2.github.io/dark-mode.js/examples) )
 
 ## License
 
